@@ -3,29 +3,115 @@
   <head>
     <meta charset="utf-8">
     <title>Yapr. | jquery.migiue.js</title>
+    <style>
+      code{
+        padding:10px;
+        margin:10px;
+        display:block;
+        border:1px solid #00ff00;
+      }
+      
+      .sample{
+        padding:10px;
+        margin:10px;
+        display:block;
+        border:1px solid #00ffcc;
+      }
+      
+      .button_area{
+        padding:10px;
+        margin:10px;
+        display:block;
+        width:100px;
+        height:100px;
+        text-align:center;
+        vertical-align:middle;
+        border:1px solid #ccffcc;
+      }.
+      
+    </style>
   </head>
   <body>
     <h1>jquery.growbutton.js</h1>
-    <div>
-      <span id="target"></span>
+    <p>
+      jquery.growbutton.jsはgrow!ボタンを設置できる様にするjqueryプラグインです。<br />
+      <br />
+      grow!buttonを設置するには、<a href="http://growbutton.com/" target="_blank">Grow!</a>にてアカウント登録を行い、apikeyを取得する必要があります。<br />
+      <ul>
+        <li><a href="http://growbutton.com/setting#!get_button" >apkey取得URL:http://growbutton.com/setting#!get_button</a></li>
+        <li><a href="http://blog.growbutton.com/tutorial_creator/#get-button" target="_blank">jquery.pluginを使用しない設置方法:</a></li>
+      </ul>
+    </p>
+    <div class="sample">
+      <h3>サンプル</h3>
+      
+      <div class="button_area">
+        <span id="target"></span>
+      </div>
+      
+      <code>
+        &lt;span id="target"&gt; &lt;/span&gt; &lt;!-- ←A button is inserted here.  --&gt;<br />
+        <br />
+        //下記コードの[aaa]の部分を取得したapikeyを指定してください。 jqueryライブラリが必要です。<br />
+        $(function() {<br />
+          $('#target').growbutton({apikey:"aaa"});<br />
+        });<br />
+      </code>
+      
+      <h3>オプション</h3>
+      <p>本pluginは下記のオプションを指定できます。</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>url</th>
+            <td>コンテンツのURL</td>
+          </tr>
+          <tr>
+            <th>title</th>
+            <td>コンテンツのページタイトル</td>
+          </tr>
+          <tr>
+            <th>apikey</th>
+            <td>
+              apiキーを登録してください。<br />
+              <a href="http://growbutton.com/setting#!get_button" >apkey取得URL:http://growbutton.com/setting#!get_button</a>
+            </td>
+          </tr>
+          <tr>
+            <th>shape</th>
+            <td>ボタンの形 square or </td>
+          </tr>
+          <tr>
+            <th>image</th>
+            <td>コンテンツの画像URL</td>
+          </tr>
+          <tr>
+            <th>サイト名</th>
+            <td>site_name</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     
+    <div id="grow">
+      <h3>Grow!とは</h2>
+      <p>
+        Grow!はボタンを通じて、あなたのコンテンツへの支援を募ることができるサービスです。ストリートライブ・パフォーマンスに対する「チップ」のように、無料で公開しているコンテンツにボタンを設置して収益を得ることができ、それがソーシャル・ネットワークで共有されます。あなたの素晴らしい作品にGrow!ボタンを付けましょう！
+      </p>
+    </div>
     
-      <footer>
-        <div id="footer">
-          Copyright (C) Grow! All Rights Reserved.
-        </div>
-      </footer>
-      
-      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-      <script type="text/javascript" src="./js/jquery.growbutton.js"></script>
-      <script type="text/javascript">
-        $(function() {
-          $('#target').growbutton({apikey:"aaa"});
-        });
-        
-        
-        
-      </script>
+    <footer>
+      <div id="footer">
+        Copyright (C) Grow! All Rights Reserved.
+      </div>
+    </footer>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.growbutton.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#target').growbutton({apikey:"aaa"});
+      });
+    </script>
   </body>
 </html>

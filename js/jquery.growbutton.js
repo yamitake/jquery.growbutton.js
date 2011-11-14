@@ -34,7 +34,9 @@ THE SOFTWARE.
       url         :  window.location , 
       title       :  document.title  ,
       shape       :  "square" ,
-      apikey      : "" //required
+      apikey      : "" , //required
+      image       : "" , //optional
+      site_name   : "" , //optional
     };
     
     
@@ -46,9 +48,11 @@ THE SOFTWARE.
     
     var r = this.each(function(){
       $(this).append(
-        '<span itemscope itemref="' + opts.shape + '" itemtype="http://growbutton.com/ns#button">'
+        '<span itemscope itemref="' + opts.shape + '" itemtype="http://growbutton.com/ns#button" style="display: none;">'
           + '<span itemprop=”url”>' + opts.url  + '</span>'
           + '<span itemprop=”title”>' + opts.title  + '</span>'
+          + (opts.image ? '<span itemprop="image">' + opts.image + '</span>¨' : "")
+          + (opts.site_name ? '<span itemprop="site_name">' + opts.site_name + '</span>' : "")
         + '</span>'
       );
     });
