@@ -37,6 +37,7 @@ THE SOFTWARE.
       apikey      : "" , //required
       image       : "" , //optional
       site_name   : "" , //optional
+      generate    : true
     };
     
     
@@ -57,7 +58,9 @@ THE SOFTWARE.
       );
     });
     
-    GrowButton.generate();
+    if(opts.generate){
+      GrowButton.generate();
+    }
     return r;
   };
 })(jQuery);
